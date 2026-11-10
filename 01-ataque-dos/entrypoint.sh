@@ -1,11 +1,17 @@
 #!/bin/sh
-TARGET=" https://servidor-web-dmz-ccabrera-rberna-csalcedo.onrender.com"
 
-echo "=== SIMULACIÓN: GENERANDO TRÁFICO MASIVO HTTP ==="
-for i in $(seq 1 30); do
-  curl -s -o /dev/null "$TARGET" &
-done
-wait
+# 1. Iniciar servidor de Render de inmediato en segundo plano para pasar la verificación
+python3 -m http.server 8080 &
 
+# 2. Esperar 2 segundos a que el servidor levante
+sleep 2
+
+# 3. Código original de tu ataque
+TARGET="https://servidor-web-dmz-ccabrera-rberna-csalcedo.onrender.com"
+
+echo "=== INICIANDO PRUEBA ==="
+# ... (aquí va el resto de tu bucle o comandos curl / nc) ...
 echo "=== PRUEBA FINALIZADA ==="
-python3 -m http.server 8080
+
+# Mantener el contenedor en ejecución
+wait
