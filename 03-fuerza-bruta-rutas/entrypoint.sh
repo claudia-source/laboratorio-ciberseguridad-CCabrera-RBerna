@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Dirección del servidor objetivo en la DMZ
-TARGET=" https://servidor-web-dmz-ccabrera-rberna-csalcedo.onrender.com"
+TARGET="https://servidor-web-dmz-ccabrera-rberna.onrender.com"
 
 # Diccionario reducido de rutas sensibles para la prueba
 RUTAS="/admin /config.php /login /secret /backup.zip /index.html"
