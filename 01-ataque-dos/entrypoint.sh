@@ -7,7 +7,7 @@ python3 -m http.server 8080 &
 sleep 2
 
 # 3. Código original de tu ataque
-TARGET="https://servidor-web-dmz-ccabrera-rberna-csalcedo.onrender.com"
+TARGET="https://servidor-web-dmz-ccabrera-rberna.onrender.com"
 
 echo "=== INICIANDO PRUEBA ==="
 # ... (aquí va el resto de tu bucle o comandos curl / nc) ...
